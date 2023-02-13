@@ -1,0 +1,30 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: app-duprovider
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.108.200:8848
+
+dubbo:
+  application:
+    name: dubbo-duprovider
+  protocol:
+    name: dubbo
+    port: 9082
+
+  registry:
+    address: nacos://192.168.108.200:8848
+
+  provider:
+    timeout: 3000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

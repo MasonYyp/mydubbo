@@ -1,0 +1,3 @@
+com\mason\duprovider\controller\DubboController.class
+com\mason\duprovider\service\TestServiceImpl.class
+com\mason\duprovider\DuproviderApplication.class

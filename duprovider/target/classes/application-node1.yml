@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  # 配置注册在Nacos中的应用名称
+  application:
+    name: app-duprovider
+
+  cloud:
+    # 设置Nacos服务注册地址
+    nacos:
+      discovery:
+        server-addr: 192.168.108.200:8848
+
+dubbo:
+  # 设置Dubbo服务的应用名，如果不设置此应用名默认为应用名，此外默认为“app-duprovider”
+  application:
+    name: dubbo-duprovider
+
+  # 设置Dubbo协议信息
+  protocol:
+    name: dubbo
+    # 端口可以设置为“-1”，表示端口自增长
+    port: 9081
+
+  # 设置注册地址
+  registry:
+    address: nacos://192.168.108.200:8848
+
+  # 设置服务超时
+  provider:
+    timeout: 3000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,32 @@
+server:
+  port: 8093
+
+spring:
+  application:
+    name: app-duconsumer
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.108.200:8848
+
+dubbo:
+
+  application:
+  name: dubbo-duprovider
+
+  protocol:
+    name: dubbo
+    port: 9093
+
+  registry:
+    address: nacos://192.168.108.200:8848
+
+  provider:
+    timeout: 3000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

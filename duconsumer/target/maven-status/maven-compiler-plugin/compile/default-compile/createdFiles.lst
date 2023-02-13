@@ -1,0 +1,3 @@
+com\mason\duconsumer\DuconsumerApplication.class
+com\mason\duconsumer\controller\DubboController.class
+com\mason\duconsumer\service\TestServiceRequest.class
